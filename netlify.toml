@@ -1,0 +1,15 @@
+[build]
+  command = "pnpm build"
+  publish = "out"
+
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[build.environment]
+  NODE_VERSION = "22"
+  PNPM_VERSION = "9"
+
+# Trang 404 tùy chỉnh (404.html) được Netlify tự phục vụ cho đường dẫn không tồn tại.
+# URL đẹp (pretty URLs): /khoa-hoc sẽ tự phục vụ khoa-hoc.html — không cần redirect.

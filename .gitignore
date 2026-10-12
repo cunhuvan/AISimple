@@ -1,118 +1,44 @@
-# =============================================================================
-# Dependencies
-# =============================================================================
-node_modules/
-.pnpm-store/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-env/
-.env.venv/
-pip-wheel-metadata/
-*.egg-info/
-*.egg
-.eggs/
-bower_components/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# =============================================================================
-# Environment & Secrets
-# =============================================================================
-.env
-.env.local
-.env.*.local
-.env.production
-.env.development
-.env.preview
-*.pem
-*.key
-secrets/
-credentials.json
-.npmrc
-.yarnrc
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# =============================================================================
-# Build & Distribution
-# =============================================================================
-dist/
-build/
-out/
-.next/
-.nuxt/
-.output/
+# testing
+/coverage
 
-# =============================================================================
-# IDE & Editor
-# =============================================================================
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.project
-.classpath
-.settings/
-*.sublime-project
-*.sublime-workspace
+# next.js
+/.next/
+/out/
 
-# =============================================================================
-# OS Files
-# =============================================================================
+# production
+/build
+
+# misc
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
+*.pem
 
-# =============================================================================
-# Logs & Debug
-# =============================================================================
-*.log
-logs/
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# =============================================================================
-# Testing & Coverage
-# =============================================================================
-.coverage
-.coverage.*
-htmlcov/
-.pytest_cache/
-.tox/
-.nox/
-coverage/
-*.cover
-*.py,cover
-.hypothesis/
-.nyc_output/
-test-results/
-playwright-report/
+# env files (can opt-in for committing if needed)
+.env*
 
-# =============================================================================
-# AI & Agent Workspace
-# =============================================================================
-vibeflow.json
-.claude/
-.cursor/
-.aider/
-.continue/
-.copilot/
+# vercel
+.vercel
 
-# =============================================================================
-# Temporary & Cache
-# =============================================================================
-*.tmp
-*.temp
-.cache/
-.parcel-cache/
-.turbo/
+# typescript
 *.tsbuildinfo
+next-env.d.ts
 
+# preview build state (local only)
+.vibeflow-preview.hash
